@@ -6,8 +6,8 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/second_project
-ExecStart=/home/ubuntu/second_project/venv/bin/gunicorn \
+WorkingDirectory=/home/ubuntu/first_django_project
+ExecStart=/home/ubuntu/first_django_project/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
